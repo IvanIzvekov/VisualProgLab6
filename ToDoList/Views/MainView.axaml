@@ -27,9 +27,9 @@
 			<ItemsControl Name="toDoList" Items="{Binding Items}">
 				<ItemsControl.ItemTemplate>
 					<DataTemplate>
-						<Border Classes="border">
+						<Border>
 							<Grid RowDefinitions="*" ColumnDefinitions="5* * *">
-								<TextBlock TextWrapping="Wrap" Text="{Binding Title}" Grid.Row="0" Grid.Column="0"></TextBlock>
+								<TextBlock Background="LightGray" TextWrapping="Wrap" Text="{Binding Title}" Grid.Row="0" Grid.Column="0"></TextBlock>
 								<Button Grid.Row="0" Grid.Column="1" Command="{Binding $parent[Window].DataContext.ChangeViewOnItem}" CommandParameter="{Binding $self.DataContext}">
 									<Image Source="/Assets/in_zoom.ico"></Image>
 								</Button>
